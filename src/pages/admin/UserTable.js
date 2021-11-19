@@ -21,7 +21,7 @@ function UserTable(props) {
     console.log("승인할 데이터는? " ,data);
     if(window.confirm(user_name + "님을 정말 삭제하시겠습니까?")){
       axios
-        .post("http://localhost:8004/app/admin/deleteUser", data)
+        .post("http://192.168.0.31/app/admin/deleteUser", data)
         .then((response) => {
           console.log("Done changeWorkStatus", response);
           alert("삭제되었습니다.");

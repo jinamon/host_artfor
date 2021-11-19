@@ -53,7 +53,7 @@ function EmailModal(props){
       user_name : member.user_name,
       user_email : email,
     };
-    axios.post("http://localhost:8004/app/user/mailConfirm2", data)
+    axios.post("http://192.168.0.31/app/user/mailConfirm2", data)
     .then((response) => {
       console.log("이메일 연결 성공", response);
       const result = response.data;

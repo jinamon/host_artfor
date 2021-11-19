@@ -29,7 +29,7 @@ function NameModal(props){
       e.preventDefault();
       member.user_name = name;
       console.log("member는? ", member);
-      axios.post("http://localhost:8004/app/user/nameupdate", member)
+      axios.post("http://192.168.0.31/app/user/nameupdate", member)
       .then((response)=>{
           console.log("서버와 통신 성공", response);
           alert("이름 변경 성공!");

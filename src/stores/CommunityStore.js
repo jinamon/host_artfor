@@ -27,7 +27,7 @@ export default class CommunityStore {
 
   cstoresCreate() {
     axios
-      .post("http://localhost:8004/app/replyinput.do", this.cstore)
+      .post("http://192.168.0.31/app/replyinput.do", this.cstore)
       .then((result) => {
         console.log("성공");
         console.log("dd", this.cstore);
@@ -41,7 +41,7 @@ export default class CommunityStore {
   cstoresRead() {
     //list
     axios
-      .get("http://localhost:8004/app/communityboard.do")
+      .get("http://192.168.0.31/app/communityboard.do")
       .then((response) => {
         console.log("성공");
         console.log("Done cstoresRead", response);
@@ -57,7 +57,7 @@ export default class CommunityStore {
 
   getWork(index) {
     axios
-      .get("http://localhost:8004/app/detail/", {
+      .get("http://192.168.0.31/app/detail/", {
         params: {
           work_no: index,
         },
@@ -74,23 +74,10 @@ export default class CommunityStore {
       });
   }
 
-  cstoresUpdate(index, member) {
-    axios
-      .patch("http://localhost:3000/api/v1/members/" + index, member)
-      .then((response) => {
-        console.log("Done membersUpdate", response);
-        this.membersRead();
-      })
-      .catch((error) => {
-        axiosError(error);
-      });
-  }
 
   cstoresDelete(index) {
-    // this.members.splice(index, 1);
-    // console.log('Done membersDelete', this.members);
     axios
-      .delete("http://localhost:8004/app/replydelete.do", index)
+      .delete("http://192.168.0.31/app/replydelete.do", index)
       .then((response) => {
         console.log("Done cstoresDelete", response);
         console.log(response);

@@ -68,7 +68,7 @@ function G_Update(props) {
         };
 
         axios
-            .post("http://localhost:8004/app/guide/update.do", data)
+            .post("http://192.168.0.31/app/guide/update.do", data)
             .then((result) => {
                 console.log("ajax 요청 성공");
 

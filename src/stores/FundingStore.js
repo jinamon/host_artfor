@@ -26,7 +26,7 @@ export default class FundingStore {
 
   fundingsRead() {
     axios
-      .get("http://localhost:8004/app/fundinglist.do")
+      .get("http://192.168.0.31/app/fundinglist.do")
       .then((response) => {
         console.log("성공");
         console.log("Done fundingsRead", response);
@@ -42,7 +42,7 @@ export default class FundingStore {
   fundingsPrc() {
     console.log("this.funding>>", this.funding);
     axios
-      .post("http://localhost:8004/app/fundingPage/", this.funding)
+      .post("http://192.168.0.31/app/fundingPage/", this.funding)
       .then((result) => {
         console.log("fundingPage 성공");
         console.log("result>>", result);

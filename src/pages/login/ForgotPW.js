@@ -25,7 +25,7 @@ function ForgotPW(props) {
     console.log("유저인포", userinfo);
 
     axios
-      .post("http://localhost:8004/app/user/findPW", data)
+      .post("http://192.168.0.31/app/user/findPW", data)
       .then((response) => {
         console.log("find PW post", response);
         result = response.data;

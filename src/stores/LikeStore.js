@@ -24,7 +24,7 @@ export default class LikeStore {
 
   likesRead() {
     axios
-      .get("http://localhost:8004/app/likelist.do")
+      .get("http://192.168.0.31/app/likelist.do")
       .then((response) => {
         console.log("성공");
         console.log("Done likesRead", response);

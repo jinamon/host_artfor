@@ -31,7 +31,7 @@ class InputPage extends React.Component {
     };
 
     axios
-      .post("http://localhost:8004/app/inputc.do", data)
+      .post("http://192.168.0.31/app/inputc.do", data)
       .then((result) => {
         console.log("성공");
         console.log("dd", data);

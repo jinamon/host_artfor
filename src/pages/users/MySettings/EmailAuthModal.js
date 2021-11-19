@@ -32,7 +32,7 @@ function EmailAuthModal(props){
         }
     
         let auth2 = auth;
-        axios.post("http://localhost:8004/app/user/confirmNum", auth2)
+        axios.post("http://192.168.0.31/app/user/confirmNum", auth2)
         .then((response2) => {
             console.log("testNum : ", auth2);
             console.log("confirmNum post ", response2);
@@ -47,7 +47,7 @@ function EmailAuthModal(props){
             if (result2 === 1) {
                 // alert("인증 완료!");
                 
-                axios.post("http://localhost:8004/app/user/emailupdate", emaildate)
+                axios.post("http://192.168.0.31/app/user/emailupdate", emaildate)
                 .then((response3)=>{
                     setCondition(4);
                     console.log("update통신성공", response3);

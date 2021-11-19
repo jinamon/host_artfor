@@ -27,7 +27,7 @@ function G_Detail(props) {
     
     useEffect(() => {
         axios   
-            .get("http://localhost:8004/app/guide/detail.do", {
+            .get("http://192.168.0.31/app/guide/detail.do", {
                 params: {
                     g_no: seq,
                 },
@@ -66,7 +66,7 @@ function G_Detail(props) {
                 });
                 axios
                     .delete(
-                        "http://localhost:8004/app/guide/delete.do?g_no="
+                        "http://192.168.0.31/app/guide/delete.do?g_no="
                         + g_no,
                         {
                             data: {

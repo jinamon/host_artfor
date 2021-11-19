@@ -40,7 +40,7 @@ function PasswordModal(props) {
     console.log("data는?", data);
 
     axios
-      .post("http://localhost:8004/app/user/pwcheck", data)
+      .post("http://192.168.0.31/app/user/pwcheck", data)
       .then((response) => {
         console.log("서버와 통신 성공", response);
 

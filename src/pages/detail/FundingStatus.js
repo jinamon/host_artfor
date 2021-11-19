@@ -25,7 +25,7 @@ function FundingStatus(props) {
     const fetchData = async () => {
       if (isComponentMounted) {
         axios
-          .get("http://localhost:8004/app/likeList/")
+          .get("http://192.168.0.31/app/likeList/")
           .then((response) => {
             console.log("Done likesRead", response);
             const findLike = response.data.find(function (result) {

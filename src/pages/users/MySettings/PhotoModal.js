@@ -31,7 +31,7 @@ function PhotoModal(props){
     data.append("user_email", member.user_email);
     console.log("data가 뭐냐고 대체", data);
     
-    axios.post("http://localhost:8004/app/user/fileupload", data, {
+    axios.post("http://192.168.0.31/app/user/fileupload", data, {
       headers: {
         "Content-Type": "multipart/form-data",
       }      

@@ -54,7 +54,7 @@ function PasswordUpdateModal(props) {
                 user_pw : modify_pw2,
             };
             console.log("비밀번호 변경했을 때 data는?, ", data);
-            axios.post("http://localhost:8004/app/user/pwupdate", data)
+            axios.post("http://192.168.0.31/app/user/pwupdate", data)
             .then((response)=>{
                 console.log("서버와 통신 성공", response);
                 setTwoCon(1);

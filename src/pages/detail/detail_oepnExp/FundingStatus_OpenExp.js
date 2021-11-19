@@ -23,7 +23,7 @@ import { AlternateEmailTwoTone } from "@material-ui/icons";
 function FundingStatus_OpenExp(props) {
   useEffect(() => {
     axios
-      .get("http://localhost:8004/app/AlarmList/")
+      .get("http://192.168.0.31/app/AlarmList/")
       .then((response) => {
         console.log("Done AlarmListRead", response);
         const findLike = response.data.find(function (result) {

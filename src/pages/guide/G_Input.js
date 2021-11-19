@@ -56,7 +56,7 @@ function G_Input(props) {
         }
     
         axios
-            .post("http://localhost:8004/app/guide/input.do", data
+            .post("http://192.168.0.31/app/guide/input.do", data
                 // headers: {
                 //     "Content-Type": "multipart/form-data",
                 // },
@@ -72,23 +72,6 @@ function G_Input(props) {
                 console.log("data >>>", data);
             });
     };
-
-    // const onFileChange = (event) => {
-    //     console.log(event.target.files[0]);
-    //     const {
-    //         target: { files },
-    //     } = event;
-    //     const reader = new FileReader();
-
-    //     reader.onloadend = (progressEvent) => {
-    //         const {
-    //             currentTarget: { result },
-    //         } = progressEvent;
-    //         // 파일 보여주기
-    //         setAttachment(result);
-    //     };
-    //     reader.readAsDataURL(files[0]);
-    // };
 
     return (
         <div className="container_guide">

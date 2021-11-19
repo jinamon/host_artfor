@@ -36,7 +36,7 @@ function SignoutModal(props){
     };
 
     axios
-      .post("http://localhost:8004/app/user/pwcheck", data)
+      .post("http://192.168.0.31/app/user/pwcheck", data)
       .then((response) => {
         console.log("pwcheck 성공", response);
 
@@ -45,13 +45,13 @@ function SignoutModal(props){
           return false;
         } else if (response.data === 1) {
           setCondition(4);
-          axios.post("http://localhost:8004/app/user/projectcheck", data)
+          axios.post("http://192.168.0.31/app/user/projectcheck", data)
           .then((response1)=> {
             console.log("projectcheck 성공", response1);
             if (response1.data === 1) {
               const confirm = window.confirm("내 프로젝트 정보가 있습니다. 탈퇴하시면 모두 삭제됩니다. 그래도 탈퇴하시겠습니까?");
               if(confirm === true) {
-                axios.post("http://localhost:8004/app/user/projectdelete", data)
+                axios.post("http://192.168.0.31/app/user/projectdelete", data)
                 .then((response2)=>{
                   console.log("projectdelete 성공", response2);
                   alert("탈퇴 되었습니다... 😢")
@@ -65,7 +65,7 @@ function SignoutModal(props){
                 return false;
               }
             } else if (response1.data === 0) {  // 내 프로젝트에 정보 없으면 바로 탈퇴
-              axios.post("http://localhost:8004/app/user/signout", data)
+              axios.post("http://192.168.0.31/app/user/signout", data)
               .then((response1)=>{
                 console.log("signout 성공", response1);
                 alert("탈퇴 되었습니다.... 😢")

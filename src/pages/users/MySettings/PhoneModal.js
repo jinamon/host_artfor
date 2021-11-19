@@ -67,7 +67,7 @@ function PhoneModal(props){
 
     // let data = phone;
 
-    axios.post("http://localhost:8004/app/user/sendSMS", data)
+    axios.post("http://192.168.0.31/app/user/sendSMS", data)
     .then((response) => {
       console.log("이메일 연결 성공", response);
       const result = response.data;

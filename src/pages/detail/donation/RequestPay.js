@@ -19,7 +19,7 @@ class RequestPay extends React.Component {
         const data = {funding_price : funding_price, user_email: user_email, user_name: user_name, work_no : work_no};
         console.log("데이터>>", data)
         axios
-          .post("http://localhost:8004/app/fundingsPrc/", data)
+          .post("http://192.168.0.31/app/fundingsPrc/", data)
           .then((result) => {
             console.log("fundingPage 성공");
             console.log("데이터2>>", data)
@@ -34,7 +34,7 @@ class RequestPay extends React.Component {
         const data = {funding_price : funding_price, funding_now : funding_now, work_no : work_no};
         console.log("데이터>>", data)
         axios
-          .post("http://localhost:8004/app/fundingsPrcUpdate/", data)
+          .post("http://192.168.0.31/app/fundingsPrcUpdate/", data)
           .then((result) => {
             console.log("fundingsPrcUpdate 성공");
             console.log("데이터2>>", data)

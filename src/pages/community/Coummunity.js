@@ -31,7 +31,7 @@ function Community(props) {
 
   function cstoresCreate() {
     axios
-      .post("http://localhost:8004/app/replyinput.do", cstore)
+      .post("http://192.168.0.31/app/replyinput.do", cstore)
       .then((result) => {
         console.log("성공");
         console.log("dd", cstore);
@@ -163,7 +163,7 @@ function Community(props) {
                             cstore.c_no = cm.c_no;
                             axios
                               .post(
-                                "http://localhost:8004/app/replydelete.do",
+                                "http://192.168.0.31/app/replydelete.do",
                                 cstore
                               )
                               .then((response) => {
@@ -211,7 +211,7 @@ function Community(props) {
                             cstore.c_no = cm.c_no;
                             axios
                               .post(
-                                "http://localhost:8004/app/replyupdate.do",
+                                "http://192.168.0.31/app/replyupdate.do",
                                 cstore
                               )
                               .then((response) => {
@@ -247,7 +247,7 @@ function Community(props) {
                             cstore.c_no = cm.c_no;
                             axios
                               .post(
-                                "http://localhost:8004/app/replydelete.do",
+                                "http://192.168.0.31/app/replydelete.do",
                                 cstore
                               )
                               .then((response) => {

@@ -28,7 +28,7 @@ function Login(props) {
     console.log("데이터>>>", data);
 
     axios
-      .post("http://localhost:8004/app/user/login.do", data)
+      .post("http://192.168.0.31/app/user/login.do", data)
       .then((response) => {
         console.log("login post user to Spring", response);
         result = response.data;
@@ -59,7 +59,7 @@ function Login(props) {
     const data = { user_email: user_email };
     console.log("데이터>>", data);
     axios
-      .post("http://localhost:8004/app/user/getUserInfo", data)
+      .post("http://192.168.0.31/app/user/getUserInfo", data)
       .then((response2) => {
         console.log("mailConfirm post ", response2);
         const result = response2.data;

@@ -41,7 +41,7 @@ function Join(props) {
     //인증번호 확인 후 일치하면 회원가입 시켜줌
     else {
       axios
-        .post("http://localhost:8004/app/user/join.do", data)
+        .post("http://192.168.0.31/app/user/join.do", data)
         .then((response) => {
           console.log("login post user to Spring", response);
           result = response.data;
@@ -61,7 +61,7 @@ function Join(props) {
     data = { user_email: getValues("user_email") };
     console.log("데이터>>", data);
     axios
-      .post("http://localhost:8004/app/user/mailConfirm2", data)
+      .post("http://192.168.0.31/app/user/mailConfirm2", data)
       .then((response) => {
         console.log("mailConfirm post ", response);
         const result = response.data;
@@ -85,7 +85,7 @@ function Join(props) {
   function checkNum() {
     let temp = getValues("confirmNum");
     axios
-      .post("http://localhost:8004/app/user/confirmNum", temp)
+      .post("http://192.168.0.31/app/user/confirmNum", temp)
       .then((response2) => {
         console.log("testNum : ", temp);
         console.log("confirmNum post ", response2);

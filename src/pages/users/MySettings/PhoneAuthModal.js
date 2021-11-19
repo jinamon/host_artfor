@@ -32,7 +32,7 @@ function PhoneAuthModal(props){
         }
     
         let auth2 = auth;
-        axios.post("http://localhost:8004/app/user/confirmNum", auth2)
+        axios.post("http://192.168.0.31/app/user/confirmNum", auth2)
         .then((response2) => {
             console.log("testNum : ", auth2);
             console.log("confirmNum post ", response2);
@@ -49,7 +49,7 @@ function PhoneAuthModal(props){
                 console.log("제대로됏나");
                 console.log(phonedate);
                 
-                axios.post("http://localhost:8004/app/user/phoneupdate", phonedate)
+                axios.post("http://192.168.0.31/app/user/phoneupdate", phonedate)
                 .then((response3)=>{
                     setCondition(4);
                     console.log("update통신성공", response3);

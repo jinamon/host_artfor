@@ -45,7 +45,7 @@ export default class FundingStore2 {
  
   fundingsRead2() {
     axios
-      .get("http://localhost:8004/app/admin/fundinglist.do")
+      .get("http://192.168.0.31/app/admin/fundinglist.do")
       .then((response) => {
         console.log("성공");
         console.log("Done fundingsRead", response);
@@ -60,7 +60,7 @@ export default class FundingStore2 {
 
   worksRead() {
     axios
-      .get("http://localhost:8004/app/")
+      .get("http://192.168.0.31/app/")
       .then((response) => {
         console.log("성공");
         console.log("Done worksRead", response);

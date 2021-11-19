@@ -48,7 +48,7 @@ function ManageArtwork(props) {
     console.log("승인할 데이터는? " ,data);
     
     axios
-      .post("http://localhost:8004/app/admin/changeFundingStatus", data)
+      .post("http://192.168.0.31/app/admin/changeFundingStatus", data)
       .then((response) => {
         console.log("Done changeWorkStatus", response);
         mainStore.worksRead();

@@ -68,7 +68,7 @@ function ProjectPlan(props) {
   function workCreate() {
     //jh
     axios
-      .post("http://localhost:8004/app/input.do", work)
+      .post("http://192.168.0.31/app/input.do", work)
       .then((result) => {
         console.log("성공");
         alert("성공적으로 프로젝트를 업로드 했습니다!😁");
@@ -539,7 +539,7 @@ function ProjectPlan(props) {
       console.log("data가 뭐냐고 대체", data);
 
 
-      axios.post('http://localhost:8004/app/input2.do', data,{
+      axios.post('http://192.168.0.31/app/input2.do', data,{
           headers: {
             "Content-Type": "multipart/form-data",
           }      

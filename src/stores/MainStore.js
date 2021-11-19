@@ -32,33 +32,11 @@ export default class MainStore {
     funding_startline: "",
   };
 
-
-
-  // worksCreate() {
-    
-  //   axios
-  //     .post("http://localhost:8004/app/input.do", this.work)
-  //     .then((result) => {
-  //       console.log("성공");
-  //       console.log("dd", this.work);
-  //     })
-  //     .catch((err) => {
-  //       console.log("실패함", err);
-  //     });
-  // };
-    
+  
 
   worksRead() {
-    // this.members = [{
-    //   name: '홍길동',
-    //   age: 20
-    // }, {
-    //   name: '춘향이',
-    //   age: 16
-    // }];
-    // console.log('Done membersRead', this.members);
     axios
-      .get("http://localhost:8004/app/")
+      .get("http://192.168.0.31/app/")
       .then((response) => {
         console.log("성공");
         console.log("Done worksRead", response);
@@ -75,7 +53,7 @@ export default class MainStore {
   worksReadSort() {
     
     axios
-      .get("http://localhost:8004/app/sortLike")
+      .get("http://192.168.0.31/app/sortLike")
       .then((response) => {
         console.log("성공");
         console.log("Done worksReadSort", response);
@@ -90,7 +68,7 @@ export default class MainStore {
  
   getWork(index) {
     axios
-    .get("http://localhost:8004/app/detail/", {
+    .get("http://192.168.0.31/app/detail/", {
     params:{
       work_no : index,
     }
@@ -108,7 +86,7 @@ export default class MainStore {
   }
 
   likePlus(index){
-    axios.get("http://localhost:8004/app/likePlus/", {
+    axios.get("http://192.168.0.31/app/likePlus/", {
       params: {
         work_no : index,
       }
@@ -124,7 +102,7 @@ export default class MainStore {
   }
 
   likeMinus(index){
-    axios.get("http://localhost:8004/app/likeMinus/", {
+    axios.get("http://192.168.0.31/app/likeMinus/", {
       params: {
         work_no : index,
       }
@@ -142,7 +120,7 @@ export default class MainStore {
     const data = {work_no: localStorage.getItem('work_no'), user_email: localStorage.getItem('user_email')}
     console.log("likePlusMinusUser 데이터>>", data)
     axios
-    .post("http://localhost:8004/app/likePlusMinusUser/", data )
+    .post("http://192.168.0.31/app/likePlusMinusUser/", data )
     .then((response)=>{
       console.log('likePlusMinusUser axious Success...')
       console.log('response>>', response);
@@ -160,7 +138,7 @@ export default class MainStore {
     const data = {work_no: localStorage.getItem('work_no'), user_email: localStorage.getItem('user_email')}
     console.log("AlarmPlusMinusUser 데이터>>", data)
     axios
-    .post("http://localhost:8004/app/AlarmPlusMinusUser/", data )
+    .post("http://192.168.0.31/app/AlarmPlusMinusUser/", data )
     .then((response)=>{
       console.log('AlarmPlusMinusUser axious Success...')
       console.log('response>>', response);
@@ -175,7 +153,7 @@ export default class MainStore {
   }
 
   AlarmPlus(index){
-    axios.get("http://localhost:8004/app/AlarmPlus/", {
+    axios.get("http://192.168.0.31/app/AlarmPlus/", {
       params: {
         work_no : index,
       }
@@ -191,7 +169,7 @@ export default class MainStore {
   }
 
   AlarmMinus(index){
-    axios.get("http://localhost:8004/app/AlarmMinus/", {
+    axios.get("http://192.168.0.31/app/AlarmMinus/", {
       params: {
         work_no : index,
       }
@@ -203,34 +181,6 @@ export default class MainStore {
       axiosError(error);
       console.log('AlarmMinus fail...')
     });
-  }
-
-  
-
-  worksUpdate(index, member) {
-    axios
-      .patch("http://localhost:3000/api/v1/members/" + index, member)
-      .then((response) => {
-        console.log("Done membersUpdate", response);
-        this.membersRead();
-      })
-      .catch((error) => {
-        axiosError(error);
-      });
-  }
-
-  worksDelete(index) {
-    // this.members.splice(index, 1);
-    // console.log('Done membersDelete', this.members);
-    axios
-      .delete("http://localhost:3000/api/v1/members/" + index)
-      .then((response) => {
-        console.log("Done membersDelete", response);
-        this.membersRead();
-      })
-      .catch((error) => {
-        axiosError(error);
-      });
   }
 
 }
