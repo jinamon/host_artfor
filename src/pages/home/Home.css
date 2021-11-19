@@ -1,0 +1,126 @@
+  /* container */
+
+
+
+.homeSlider {
+  max-width: 1100px;
+  background-color: rgba(150, 205, 209, 0.151);
+  margin: auto;
+  margin-bottom: 50px;
+  /* container */
+  max-width: 1080px;
+  width: 100%;
+}
+
+.slideImg {
+  margin: auto;
+  max-width: 500px;
+}
+
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+.main_home {
+  font-size: 22px;
+  text-align: left;
+  margin-left: 55px;
+  font-family: 'NanumSquareB';
+  /* margin-left: 410px; */
+  font-weight: bold;
+  
+}
+
+
+
+.card_Home {
+  /* margin-left: 50px; */
+  /* margin-right: 50px; */
+  margin-top: 10px;
+  margin-bottom: 50px;
+  
+  
+ 
+}
+
+.cardtitle_Home {
+  font-family:'NanumSquareL';
+  font-size: 14px;
+  text-align: left;
+  
+ 
+}
+
+
+/* 카드 이미지 밑에 글씨 패딩~ */
+.cardbody_Home{
+  /* font-family: 'NanumSquareB'; */
+  padding-left: 0px;
+  height: 180px;
+
+}
+
+.cardtext_Home {
+  font-family: 'NanumSquareR';
+  font-size: 17px;
+  height: 40px;
+  
+}
+
+.cardfooter {
+  text-align: left;
+  font-weight: bold;
+  color: #FF5757;
+  border: 0;
+  background-color: white;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: grey;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.main_card_home{
+      /* container */
+      /* max-width: 1110px;
+      width: 100%;
+      
+      margin-left: 410px;
+      text-align: left; */
+ /* container */
+ max-width: 1200px;
+ width: 100%;
+ /* margin-left: 410px; */
+ margin: auto;
+ text-align: left;
+      
+} 
+
+.main_home_in_1{
+  padding-left: 55px;
+}
+
+.cardgroup_Home{
+  max-width: 1105px;
+
+    width: 100%;
+    
+      
+}
+
+
+
+
+
